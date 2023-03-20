@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --main-color: #16db65;
+  --black: #040403;
+  --secondary-black: #2e2e2e;
+  --white: #f9fbf2;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scroll Bar Customization */
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--secondary-black);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #04a043;
+}
+
+.main-app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--black);
+}
+.main-app .container {
+  height: 100%;
+  margin: auto;
+  padding: 0 6.4rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12.8rem;
+  gap: 7.2rem;
+}
+.title {
+  font-size: 5.6rem;
+  color: var(--white);
+  font-weight: 600;
+  text-align: center;
+}
+.title span {
+  color: var(--main-color);
+}
+.columns {
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+  padding-bottom: 6.4rem;
+}
+.columns .col {
+  display: grid;
+  gap: 1.2rem;
+  padding-bottom: 3.2rem;
+}
+.columns .col h3 {
+  font-size: 3.2rem;
+  color: var(--white);
+  font-weight: 500;
+  background-color: var(--secondary-black);
+  padding: 1.6rem 8rem;
+  text-align: center;
+}
+#not-started h3 {
+  border-left: 12px solid #db1616;
+}
+#in-progress h3 {
+  border-left: 12px solid #dbba16;
+}
+#completed h3 {
+  border-left: 12px solid #4416db;
+}
+.columns .col input {
+  padding: 16px 8px;
+  outline: 0;
+  border: none;
+  background-color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 600;
+  flex: 1;
+}
+.columns .col input::placeholder {
+  transition: 0.3s;
+}
+.columns .col input:focus::placeholder {
+  opacity: 0;
+}
+.add-btn {
+  padding: 1.6rem 0;
+  font-size: 2rem;
+  background-color: var(--main-color);
+  border: none;
+  outline: 0;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 4.8rem;
+}
+
+.task {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6rem 0 0;
+  color: var(--black);
+}
+.task input {
+  cursor: move;
+}
+.task-btns {
+  display: flex;
+  gap: 0.8rem;
+}
+.task .task-btn {
+  padding: 0;
+  min-width: 3.6rem;
+  height: 3.6rem;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 1.6rem;
+}
+.task .edit {
+  background-color: #075dc6;
+}
+.task .delete {
+  background-color: #c60707;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2.4rem 9.6rem;
+  color: #fff;
+  width: 100%;
+  background-color: rgba(46, 46, 46, 0.5);
+  backdrop-filter: blur(24px);
+}
+footer p {
+  font-size: 1.8rem;
+  text-align: center;
+}
+footer p a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+/* Start Responsive */
+
+@media only screen and (max-width: 1235px) {
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 860px) {
+  .columns {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 7.2rem;
+  }
+}
+@media only screen and (max-width: 620px) {
+  html {
+    font-size: 55%;
+  }
+  .main-app .container {
+    padding: 3.2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 45%;
+  }
+  .main-app .container {
+    padding: 3.2rem;
+  }
+}

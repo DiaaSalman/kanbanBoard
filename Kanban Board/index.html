@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Kanban Board</title>
+  </head>
+  <body>
+    <main class="main-app">
+      <div class="container">
+        <h1 class="title">
+          Kanban
+          <span>Board</span>
+        </h1>
+        <div class="columns">
+          <div class="col-container">
+            <div class="col" id="not-started">
+              <h3>Not Started</h3>
+              <input type="text" placeholder="Add Task" id="not-started-task" />
+            </div>
+            <button class="add-btn">
+              + ADD
+            </button>
+          </div>
+
+          <div class="col-container">
+            <div class="col" id="in-progress">
+              <h3>In Progress</h3>
+              <input type="text" placeholder="Add Task" id="in-progress-task" />
+            </div>
+            <button class="add-btn">
+              + ADD
+            </button>
+          </div>
+
+          <div class="col-container">
+            <div class="col" id="completed">
+              <h3>Completed</h3>
+              <input type="text" placeholder="Add Task" id="completed-task" />
+            </div>
+            <button class="add-btn">
+              + ADD
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Copyrights &copy; 2023
+        <a href="https://www.linkedin.com/in/diaasalman/" target="_blank">
+          Diaa Salamn
+        </a>
+      </p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
